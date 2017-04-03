@@ -9,6 +9,7 @@ print(newURL)
 
 with urllib.request.urlopen(newURL) as url:
     File = json.loads(url.read())
+
     print(File)
-    print(str(File).count('when_message_cast'))
+    print("신호를 보낼 때:", str(File).count('when_message_cast'))
     print(str(File).count('끝'))
